@@ -11,7 +11,7 @@ router.put('/typeroute/update', function(req, res, next) {
     var typeroute = new TypeRoute(
         {
             type: req.body.type,
-            lista: req.body.name
+            lista: req.body._id
         }
     );
 

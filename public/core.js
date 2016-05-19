@@ -119,6 +119,8 @@ angular.module('MainApp', [])
 
 
 
+
+
     // Función para registrar una Ruta
     $scope.registrarRuta = function () {
         $http.post('/route', $scope.newRuta)
@@ -130,6 +132,17 @@ angular.module('MainApp', [])
                 console.log('Error: ' + data);
             });
     };
+
+        $scope.Mostrarportipo = function (tipo) {
+
+            $http.get('/routesbytype/' + tipo).success(function (data) {
+                    $scope.rutas = data;
+                })
+                .error(function (data) {
+                    console.log('Error: ' + data);
+                });
+
+        };
 
 
 

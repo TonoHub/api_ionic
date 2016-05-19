@@ -1,6 +1,9 @@
 /**
  * Created by carol on 12/04/16.
  */
+/**
+ * Created by carol on 12/04/16.
+ */
 var express = require('express');
 var router  = express.Router();
 
@@ -22,10 +25,10 @@ router.post('/route', function(req, res, next) {
     });
 
     Route.find({}).exec().then(function (routes) {
-       res.json(routes).end();
+        res.json(routes).end();
     });
 
-   //res.json(route.toObject());
+    //res.json(route.toObject());
 
 
 });
@@ -33,3 +36,4 @@ router.post('/route', function(req, res, next) {
 
 
 module.exports = router;
+
